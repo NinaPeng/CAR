@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "car-car",
+    "version": "0.1.0",
+    "port-version": 0,
+    "description": "Arrow data transmission between CXX and Rust",
+    "builtin-baseline": "4340582bc30f3e539bd4f52e26418f7d62145956",
+    "dependencies": [
+        "catch2",
+        "corrosion",
+        "spdlog",
+        "arrow",
+        "fmt"
+    ]
+}

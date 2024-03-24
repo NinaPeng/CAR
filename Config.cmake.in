@@ -1,0 +1,15 @@
+@PACKAGE_INIT@
+
+set(EXPORT_PACKAGE_NAME car-car)
+include("${CMAKE_CURRENT_LIST_DIR}/${EXPORT_PACKAGE_NAME}-targets.cmake")
+
+# add third party dependencies
+# only the top level project will search all dependencies for itself and all its sub projects so that cmake configuration faster
+    
+    find_package(Arrow REQUIRED)
+    
+    if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
+    find_library(COREFOUNDATION_LIBRARY NAMES CoreFoundation REQUIRED)
+    endif()
+
+check_required_components(${EXPORT_PACKAGE_NAME})
